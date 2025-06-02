@@ -1,11 +1,16 @@
+import LoginPage from './components/pages/LoginPage'
+import DashBoardPage from './components/pages/DashBoard'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 function App() {
   return (
     <>
-      <div className="flex justify-center items-center flex-col h-screen bg-gray-800 text-white">
-        <h1 className="text-red-200">Welcome to the React App</h1>
-        <p>This is a simple React application.</p>
-        <p>wade hari, tailwind setupped</p>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/dashboard" element={<DashBoardPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
